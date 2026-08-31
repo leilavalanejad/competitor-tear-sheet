@@ -5,8 +5,9 @@ product team can argue with: the category's vocabulary, how their money moves, a
 pricing teardown, what they've quietly stopped claiming, where they're genuinely
 strong, where they're structurally exposed, and what to watch.
 
-It's a set of instructions for Claude rather than a program. `SKILL.md` is the
-whole thing.
+`SKILL.md` is the whole thing, a set of instructions rather than a program.
+`build.py` is optional and only structures research you've already collected;
+see Using it below.
 
 **It's half of a pair.** This is the outside view, built from public sources.
 [Review Signal](https://github.com/leilavalanejad/review-signal) is the inside
@@ -117,13 +118,45 @@ rediscover it.
 
 ## Using it
 
-Drop `SKILL.md` into your skills directory and it triggers when you ask about a
-competitor. Or read it as a research checklist and do the work yourself. The
-structure is the useful part and it doesn't need a model to be worth following.
+**For the research, use `SKILL.md` in a Claude conversation with web access.**
+Paste it in and name a company, or drop the folder into your skills directory so
+it triggers on its own. No API key involved. This is the better path, because
+the research step needs to actually read pricing pages and changelogs.
 
-Then run the same company's reviews through Review Signal and read the two side
-by side. The interesting moments are where they disagree: a pricing page that
-promises simplicity next to forty reviews about surprise charges is a finding.
+**For structuring research you already have, there's `build.py`.**
+
+```bash
+pip install anthropic
+export ANTHROPIC_API_KEY="sk-ant-..."
+python build.py Stripe sources/stripe/
+```
+
+It takes a folder of pages you saved as `.txt` and produces the tear sheet in
+markdown, citing the source filename after every figure.
+
+**It refuses to run without source files**, on purpose. `SKILL.md` opens with
+"never write from priors," and a script that took a company name and asked a
+model to describe it would violate its own first rule. Pricing changes.
+Companies get acquired. A model's recollection of a pricing page is not a
+pricing page. So the guard is the design:
+
+```
+$ python build.py Stripe sources/stripe/
+
+  No source files in sources/stripe/.
+
+  This script will not write a tear sheet from the model's memory.
+  Save the pricing page, the changelog, the homepage and anything
+  else you found as .txt files in that folder, then run it again.
+```
+
+That error fires before it checks for an API key, because it's the more
+important thing to hear.
+
+Either way, run the same company's reviews through Review Signal afterwards and
+read the two side by side. The interesting moments are where they disagree: a
+pricing page that promises simplicity next to forty reviews about surprise
+charges is a finding.
 
 ## What I'd change
 
