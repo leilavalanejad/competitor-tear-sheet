@@ -5,7 +5,7 @@ product team can argue with: the category's vocabulary, how their money moves, a
 pricing teardown, what they've quietly stopped claiming, where they're genuinely
 strong, where they're structurally exposed, and what to watch.
 
-`SKILL.md` is the whole thing, a set of instructions rather than a program.
+The original `SKILL.md` is a set of research instructions. The `web/` app adds a browser interface and a live-research endpoint.
 `build.py` is optional and only structures research you've already collected;
 see Using it below.
 
@@ -15,6 +15,12 @@ view, built from what that company's customers actually say. Run both on the
 same competitor and read them together.
 
 ---
+
+## Web interface
+
+[Open the private site](https://company-tear-sheet.lvalanejad204461.chatgpt.site)
+
+The project now includes a Sites web app in [`web/`](web/README.md), with company search, source-linked sections, saved briefs, Markdown export and print-to-PDF. A sourced Stripe example is available immediately. **Live research for new companies requires an OpenAI API connection**, see the web app README for configuration and verification limits.
 
 ## Why the pair matters
 
