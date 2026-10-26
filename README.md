@@ -16,9 +16,13 @@ same competitor and read them together.
 
 ---
 
+## App status
+
+The Lovable implementation is unpublished and awaiting managed web-search setup, owner provisioning and end-to-end research tests. Its source has not yet been synchronized to this repository. The `web/` directory currently contains the Sites prototype described below.
+
 ## Web interface
 
-[Open the private site](https://company-tear-sheet.lvalanejad204461.chatgpt.site)
+The Sites prototype is available to the project owner. A public app link will be added after live research is verified and publication is approved.
 
 The project now includes a Sites web app in [`web/`](web/README.md), with company search, source-linked sections, saved briefs, Markdown export and print-to-PDF. A sourced Stripe example is available immediately. **Live research for new companies requires an OpenAI API connection**, see the web app README for configuration and verification limits.
 
