@@ -5,7 +5,7 @@ product team can argue with: the category's vocabulary, how their money moves, a
 pricing teardown, what they've quietly stopped claiming, where they're genuinely
 strong, where they're structurally exposed, and what to watch.
 
-`SKILL.md` is the whole thing, a set of instructions rather than a program.
+The original `SKILL.md` is a set of research instructions. The `web/` app adds a browser interface and a live-research endpoint.
 `build.py` is optional and only structures research you've already collected;
 see Using it below.
 
@@ -15,6 +15,16 @@ view, built from what that company's customers actually say. Run both on the
 same competitor and read them together.
 
 ---
+
+## App status
+
+The Lovable implementation is unpublished and awaiting managed web-search setup, owner provisioning and end-to-end research tests. Its source has not yet been synchronized to this repository. The `web/` directory currently contains the Sites prototype described below.
+
+## Web interface
+
+The Sites prototype is available to the project owner. A public app link will be added after live research is verified and publication is approved.
+
+The project now includes a Sites web app in [`web/`](web/README.md), with company search, source-linked sections, saved briefs, Markdown export and print-to-PDF. A sourced Stripe example is available immediately. **Live research for new companies requires an OpenAI API connection**, see the web app README for configuration and verification limits.
 
 ## Why the pair matters
 
