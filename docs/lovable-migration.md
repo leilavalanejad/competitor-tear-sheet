@@ -1,7 +1,19 @@
 # Lovable migration brief
 
-Status: prepared for migration, not yet connected to or deployed on Lovable.
+Status (October 26, 2026): initial Lovable implementation completed; unpublished and not ready to merge. Live search and signed-in research tests remain blocked.
 Approved direction: use the owner's existing Lovable workspace and credits for this company-research app.
+
+## Current implementation and remaining verification
+
+- [Lovable editor](https://lovable.dev/projects/38f22f74-387b-4994-8f22-8b28f9625a61)
+- [Unpublished preview](https://id-preview--38f22f74-387b-4994-8f22-8b28f9625a61.lovable.app)
+- Initial implementation commit: 721a3f4c9d4df621955b87501869edceb6affd82.
+- Builder reported 6.4 credits for the initial build, including a small AI connection test. This is not the cost of a completed research report.
+- Workspace connector inventory independently confirms no connectors are configured. Add Perplexity through the Lovable dashboard using Managed by Lovable, then link the connection to the project.
+- Source inspection confirms server-side role/readiness checks and separate search/synthesis modules. Full public/private company research has not been executed.
+- Review identified first-signup owner assignment and stale job state before locking; a corrective build was requested (message umsg_01m5wtx24de4wa9pycddde58n6). Remove automatic owner assignment; require explicit provisioning. Re-read state after acquiring a lock and ensure token-safe release. Also review page-fetch target/redirect restrictions. Do not claim these fixes passed until inspected.
+- Owner account provisioning, real research acceptance tests, search date-filter verification, and GitHub sync are still pending.
+- The Lovable source is not yet synchronized into this repository. web/ remains the Sites prototype. No public Lovable app URL exists yet.
 
 ## Source and scope
 
